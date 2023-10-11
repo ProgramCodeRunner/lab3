@@ -20,7 +20,7 @@ jobs:
       - name: "Install project dependencies"
         run: pip install -r requirements.txt
       - name: "Run tests and code coverage analysis"
-        run: coverage run -m pytest --html=${{ env.PYTEST_REPORT_PATH }} --self-contained-html
+        run: run -m pytest --html=${{ env.PYTEST_REPORT_PATH }} --self-contained-html
       - name: "Generate code coverage html report"
         run: coverage html --directory ${{ env.COVERAGE_HTML_REPORT_PATH }}
       - name: "Archive pytest and coverage reports"
