@@ -26,9 +26,15 @@ jobs:
       - name: "Run tests and code coverage analysis"
         run: pytest --html=report.html --self-contained-html
 
-      - name: "Upload test artifacts"
-        uses: actions/upload-artifact@v2
         if: success()
-        with:
-          name: "test-results"
-          path: report.html
+          - name: "Upload test artifacts"
+            uses: actions/upload-artifact@v2
+            with:
+              name: "test-results"
+              path: report.html
+
+          - name: "Upload code artifacts"
+            uses: actions/upload-artifact@v2
+            with:
+              name: code
+              path: .
