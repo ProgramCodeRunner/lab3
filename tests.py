@@ -1,5 +1,5 @@
 import pytest
-import function
+import functions
 
 
 # Тест функции, которая определяет n чисел Фибоначчи
@@ -15,7 +15,7 @@ class Test_Fibonacci:
         return [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
 
     def test_fibonacci(self, massFibonacci, numbFibonacci):
-        assert function.fibonacci(numbFibonacci) == massFibonacci, \
+        assert functions.fibonacci(numbFibonacci) == massFibonacci, \
             "При вычислении чисел фибоначчи возникла ошибка, данные не совпали"
 
 # Тест функции, которая сортирует массив по возрастанию и убыванию методом пузырька
@@ -36,28 +36,28 @@ class Test_BubbleSort:
         return sorted(not_sorted, reverse=True)
 
     def test_bubleSort_up(self, not_sorted, sorted_up):
-        assert function.bubleSort(not_sorted, 1) == sorted_up, \
+        assert functions.bubleSort(not_sorted, 1) == sorted_up, \
             "При сортировке по возрастанию возникла ошибка, данные не совпали"
 
     def test_bubleSort_down(self, not_sorted, sorted_down):
-        assert function.bubleSort(not_sorted, 0) == sorted_down, \
+        assert functions.bubleSort(not_sorted, 0) == sorted_down, \
             "При сортировке по убыванию возникла ошибка, данные не совпали"
 
 # Тест функции, которая производит калькуляцию между двумя числами
 class Test_Calculate:
 
     def test_calculate_plus(self):
-        assert function.calculate(4, 12, '+') == 16, \
+        assert functions.calculate(4, 12, '+') == 16, \
             "При сложении возникла ошибка, данные не совпали"
 
     def test_calculate_minus(self):
-        assert function.calculate(4, 12, '-') == -8, \
+        assert functions.calculate(4, 12, '-') == -8, \
             "При вычитании возникла ошибка, данные не совпали"
 
     def test_calculate_multiplication(self):
-        assert function.calculate(4, 12, '*') == 48, \
+        assert functions.calculate(4, 12, '*') == 48, \
             "При умножении возникла ошибка, данные не совпали"
 
     def test_calculate_division(self):
-        assert function.calculate(4, 16, '/') == 0.25, \
+        assert functions.calculate(4, 16, '/') == 0.25, \
             "При делении возникла ошибка, данные не совпали"
