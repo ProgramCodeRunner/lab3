@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       COVERAGE_HTML_REPORT_PATH: /tmp/coverage_html_report
-      COVERAGE_XML_REPORT_PATH: /tmp/coverage_xml_report.xml
       PYTEST_REPORT_PATH: /tmp/pytest_report.html
 
     steps:
@@ -28,7 +27,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: "Run tests and code coverage analysis"
-        run: pytest --html=${{ env.PYTEST_REPORT_PATH }} --self-contained-html
+        run: pytest --html=report.html --self-contained-html
 
       - name: "Archive pytest and coverage reports"
         uses: actions/upload-artifact@v2
