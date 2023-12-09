@@ -18,6 +18,7 @@ class Test_Fibonacci:
         assert functions.fibonacci(numbFibonacci) == massFibonacci, \
             "При вычислении чисел фибоначчи возникла ошибка, данные не совпали"
 
+
 # Тест функции, которая сортирует массив по возрастанию и убыванию методом пузырька
 class Test_BubbleSort:
     # Функция возвращает массив несортированных чисел
@@ -42,6 +43,7 @@ class Test_BubbleSort:
     def test_bubleSort_down(self, not_sorted, sorted_down):
         assert functions.bubleSort(not_sorted, 0) == sorted_down, \
             "При сортировке по убыванию возникла ошибка, данные не совпали"
+
 
 # Тест функции, которая производит калькуляцию между двумя числами
 class Test_Calculate:
